@@ -1,0 +1,18 @@
+$background: #ECF2FF;
+$title-color: #666666;
+
+.payment {
+	background-color: $background;
+}
+
+.payment__wrapper {
+	padding: 40px 60px;
+}
+
+.payment__title {
+	color: $title-color;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}

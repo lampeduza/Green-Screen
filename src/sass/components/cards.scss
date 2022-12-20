@@ -1,0 +1,6 @@
+@use './global/library.scss';
+
+.cards {
+	@include library.reset-list;
+	margin-bottom: 20px;
+}

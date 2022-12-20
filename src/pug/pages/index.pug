@@ -1,0 +1,297 @@
+doctype html
+html(lang="ru-RU")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="content")
+    link(rel="stylesheet" href="css/styles.css")
+    link(rel="preload" href="fonts/montserrat/400.woff2" as="font" type="font/woff2" crossorigin)
+    link(rel="preload" href="fonts/montserrat/700.woff2" as="font" type="font/woff2" crossorigin)
+    title Green Screen | Description
+  body
+    //- HEADER COMPONENT
+    header.header
+      .header__wrapper.container
+        //- LOGO COMPONENT
+        a.header__logo.logo(href="#")
+          picture.logo__picture
+            source(type="image/webp" srcset="img/logo.webp 1x, img/logo@2x.webp 2x")
+            img.logo__image(src="img/logo.png" srcset="img/logo@2x.png 2x" width="98" height="40" alt="Green Screen app logo" title="Green Screen app logo")
+        //- BREADCRUMBS COMPONENT
+        ul.header__breadcrumbs.breadcrumbs
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="index.html")
+              .
+                Главная
+              svg(width="6" height="10")
+                use(xlink:href="img/sprite.svg#breadcrumbs-arrow")
+          li.breadcrumbs__item
+            a.breadcrumbs__link(href="#sessions.html")
+              .
+                Сеансы
+              svg(width="6" height="10")
+                use(xlink:href="img/sprite.svg#breadcrumbs-arrow")
+          li.breadcrumbs__item.breadcrumbs__item--current
+            a.breadcrumbs__link Аватар: Путь воды
+        //- CINEMAS COMPONENT
+        .header__cinemas.cinemas
+          .cinemas__container
+            .cinemas__content
+              span.cinemas__value Кинотеатр &laquo;San city&raquo;
+              svg(width="10" height="6")
+                use(xlink:href="img/sprite.svg#arrow-down")
+            label.visually-hidden(for="cinemas-list") Выберете кинотеатр:
+            select#cinemas-list.visually-hidden.select(name="cinemas-list")
+              option.select__item(value="San-city") Кинотеатр &laquo;San city&raquo;
+              option.select__item(value="Royal-park") Кинотеатр &laquo;Royal park&raquo;
+            //- CINEMAS LIST COMPONENT
+            ul.cinemas__list
+              li.cinemas__item.cinemas__item--current
+                a.cinemas__link(href="#") Кинотеатр &laquo;San city&raquo;
+              li.cinemas__item
+                a.cinemas__link(href="#") Кинотеатр &laquo;Royal park&raquo;
+    main.main
+      //- NAVIGATION COMPONENT
+      nav.navigation
+        //- NAVIGATION LIST COMPONENT
+        ul.navigation__list
+          li.navigation__item.navigation__item--current
+            a.navigation__link(href="#")
+              svg(width="18" height="22")
+                use(xlink:href="img/sprite.svg#ticket")
+              span.navigation__text Сеансы
+          li.navigation__item
+            a.navigation__link(href="#")
+              svg(width="18" height="22")
+                use(xlink:href="img/sprite.svg#trailers")
+              span.navigation__text Трейлеры
+          li.navigation__item
+            a.navigation__link(href="#")
+              svg(width="18" height="22")
+                use(xlink:href="img/sprite.svg#news")
+              span.navigation__text Новости
+          li.navigation__item
+            a.navigation__link(href="#")
+              svg(width="18" height="22")
+                use(xlink:href="img/sprite.svg#about-us")
+              span.navigation__text О Нас
+          li.navigation__item
+            a.navigation__link(href="#")
+              svg(width="19" height="22")
+                use(xlink:href="img/sprite.svg#contacts")
+              span.navigation__text Контакты
+        //- TOOLBAR COMPONENT
+        a.navigation__toolbar.toolbar(href="#")
+          picture
+            source(type="image/webp" srcset="img/avatar.webp 1x, img/avatar@2x.webp 2x")
+            img.toolbar__avatar(src="img/avatar.png" srcset="img/avatar@2x.png 2x" width="40" height="40" alt="Аватар пользователя" title="Аватар пользователя")
+          span.toolbar__text Аккаунт
+      //- INTERFACE COMPONENT
+      section.interface
+        .interface__wrapper
+          //- SLIDER COMPONENT
+          section.interface__slider.slider
+            h2.visually-hidden Выберете день
+            ul.slider__list
+              li.slider__item
+                a.slider__link(href="#")
+                  h3.slider__header 22 сентября
+                  h4.slider__day четверг
+              li.slider__item.slider__item--chosen
+                a.slider__link(href="#")
+                  h3.slider__header 23 сентября
+                  h4.slider__day пятница
+              li.slider__item
+                a.slider__link(href="#")
+                  h3.slider__header 24 сентября
+                  h4.slider__day суббота
+            ul.slider__controls
+              li.slider__control.slider__control--previous
+                button.slider__button(type="button")
+                  svg(width="13" height="22")
+                    use(xlink:href="img/sprite.svg#slider-left")
+                  span.visually-hidden Предыдущий слайд
+              li.slider__control.slider__control--next
+                button.slider__button(type="button")
+                  svg(width="13" height="22")
+                    use(xlink:href="img/sprite.svg#slider-left")
+                  span.visually-hidden Следующий слайд
+          //- SCHEDULE COMPONENT
+          section.interface__schedule.schedule
+            h2.visually-hidden Выберете формат фильма и время
+            dl.schedule__list
+              dt.schedule__term 2D:
+              dd.schedule__value #[a.schedule__link(href="#") 12:00 - 13:30]
+              dd.schedule__value #[a.schedule__link(href="#") 16:30 - 18:00]
+              dd.schedule__value.schedule__value--chosen #[a.schedule__link(href="#") 20:00 - 21:30]
+            dl.schedule__list
+              dt.schedule__term 3D:
+              dd.schedule__value #[a.schedule__link(href="#") 10:00 - 11:30]
+              dd.schedule__value #[a.schedule__link(href="#") 23:00 - 00:30]
+          //- SCREEN COMPONENT
+          section.interface__screen.screen
+            picture
+              source(type="image/webp" srcset="img/screen.webp 1x, img/screen@2x.webp 2x")
+              img.screen__image(src="img/screen.png" srcset="img/screen@2x.png" width="1180" height="60" alt="2Д экран")
+          //- SEATS COMPONENT
+          section.interface__seats.seats
+            h2.visually-hidden Выберете места
+            table.seats__table
+              tr.seats__row
+                td.seats__caption Ряд 1
+                td.seats__seat
+                td.seats__seat
+                td.seats__seat.seats__seat--taken
+                  button(type="button")
+                    span 1
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat.seats__seat--taken
+                  button(type="button")
+                    span 2
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat.seats__seat--free
+                  button(type="button")
+                    span 3
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat.seats__seat--taken
+                  button(type="button")
+                    span 4
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat.seats__seat--taken
+                  button(type="button")
+                    span 5
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat
+                td.seats__seat
+              tr.seats__row
+                td.seats__caption Ряд 2
+                td.seats__seat.seats__seat--taken
+                  button(type="button")
+                    span 1
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat.seats__seat--free
+                  button(type="button")
+                    span 2
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat.seats__seat--taken
+                  button(type="button")
+                    span 3
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat.seats__seat--chosen
+                  button(type="button")
+                    span 4
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat.seats__seat--chosen
+                  button(type="button")
+                    span 5
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat.seats__seat--free
+                  button(type="button")
+                    span 6
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat.seats__seat--taken
+                  button(type="button")
+                    span 7
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat.seats__seat--free
+                  button(type="button")
+                    span 8
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+                td.seats__seat.seats__seat--taken
+                  button(type="button")
+                    span 9
+                    svg(width="80" height="80")
+                      use(xlink:href="img/sprite.svg#seat")
+          //- HINT COMPONENT
+          section.interface__hint.hint
+            ul.hint__list
+              li.hint__item.hint__item--taken Место занято
+              li.hint__item.hint__item--free Место занято
+              li.hint__item.hint__item--chosen Выбранное место
+
+              
+      //- ADDITIONAL COMPONENT
+      aside.additional
+        //- TICKETS COMPONENT
+        section.additional__tickets.tickets
+          .tickets__wrapper
+            h2.visually-hidden Ваши билеты
+            //- TICKET COMPONENT
+            .tickets__full.ticket
+              header.ticket__header
+                h3.ticket__caption Билеты
+                p.ticket__amount #[span ×] 2
+              dl.ticket__data
+                dt.ticket__term Фильм:
+                dd.ticket__value Аватар: Путь воды
+                dt.ticket__term Дата:
+                dd.ticket__value 23 сентября
+                dt.ticket__term Время:
+                dd.ticket__value 20:00
+                dt.ticket__term Ряд:
+                dd.ticket__value 2
+                dt.ticket__term Места:
+                dd.ticket__value 4, 5
+              footer.ticket__footer
+                picture
+                  source(type="image/webp" srcset="img/bar-code.webp 1x, img/bar-code@2x.webp 2x")
+                  img.ticket__bar-code(src="img/bar-code.png" srcset="img/bar-code@2x.png 2x" width="180" height="26" alt="Ваш штрих-код, пропуск на фильм" title="Ваш штрих-код, пропуск на фильм")
+        //- PAYMENT COMPONENT
+        section.additional__payment.payment
+          .payment__wrapper
+            h2.payment__title Оплата
+            //- CARDS COMPONENT
+            ul.payment__cards.cards
+              li.cards__item
+                //- CARD COMPONENT
+                article.cards__card.card
+                  .card__chip
+                  h3.card__name SuperCard
+                  p.card__static-number
+                    span 1234
+                    span 5678
+                    span 9012
+                    span 3456
+                  span.card__cardholder-name Mark Lemmer
+                  span.card__expiry-date 20/99
+            //- ATTACH AREA COMPONENT
+            .payment__attach-area.attach-area
+              h2.visually-hidden Прикрепите вашу карту
+              a.attach-area__link(href="#")
+                svg(width="17" height="16")
+                  use(xlink:href="img/sprite.svg#plus")
+            a.attach-area__pay(href="#") Оплатить #[span.attach-area__amount 800] &nbsp; ₽
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

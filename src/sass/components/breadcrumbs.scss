@@ -1,0 +1,31 @@
+@use './global/library.scss';
+
+$breadcrumbs-link-active-color: #666666;
+
+.breadcrumbs {
+	@include library.reset-list;
+	display: flex;
+	flex-wrap: wrap;
+
+	max-width: 895px;
+}
+
+.breadcrumbs__item {
+	margin-right: 16px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.breadcrumbs__link {
+	color: inherit;
+
+	&:not([href]) {
+		color: $breadcrumbs-link-active-color;
+	}
+
+	svg {
+		margin-left: 16px;
+	}
+}

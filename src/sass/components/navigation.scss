@@ -1,0 +1,87 @@
+@use './global/library.scss';
+
+.navigation {
+	padding: 20px 0 20px 30px;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: repeat(2, auto);
+	gap: 50px;
+	background-color: library.$svg-fill-color-active;
+
+}
+
+.navigation__list {
+	@include library.reset-list;
+	max-height: 564px;
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+    width: 3px;
+    height: 100%;
+    background-color: darken(#ca38ae, 30%);
+	}
+
+	&::-webkit-scrollbar-thumb {
+    background-color: lighten(#ca38ae, 30%);
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #f3faf7;
+	}
+}
+
+.navigation__item {
+	&--current {
+		.navigation__link {
+			background-color: library.$active-link-bg-color;
+			border-radius: library.$link-border-radius 0 0 library.$link-border-radius;
+
+			span {
+				color: library.$primary-color;
+			}
+
+			svg {
+				stroke: library.$primary-link-color;
+				fill: library.$svg-fill-color-active;
+			}
+		}
+	}
+}
+
+.navigation__link {
+	display: flex;
+	align-items: center;
+	padding: 20px 30px;
+	border-radius: library.$link-border-radius 0 0 library.$link-border-radius;
+
+	span {
+		margin-left: 12px;
+		font-size: 14px;
+		line-height: 16px;
+		color: library.$primary-link-color;
+		text-transform: uppercase;
+	}
+
+	svg {
+		stroke: library.$svg-stroke-color;
+		fill: library.$primary-link-color;
+	}
+
+	&:focus,
+	&:active {
+		background-color: library.$active-link-bg-color;
+
+		span {
+			color: library.$primary-color;
+		}
+
+		svg {
+			stroke: library.$primary-link-color;
+			fill: library.$svg-fill-color-active;
+		}
+	}
+}
+
+.navigation__toolbar {
+	align-self: end;
+	display: flex;
+	align-items: center;
+}

@@ -1,0 +1,36 @@
+@use './global/library.scss';
+
+$area-border: 2px solid #CCDAF4;
+$area-border-radius: 8px;
+$pay-button-color: #43D000;
+$pay-button-radius: 30px;
+
+.attach-area {
+	margin-bottom: 60px;
+}
+
+.attach-area__link {
+	border: $area-border;
+	border-radius: $area-border-radius;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+
+	svg {
+		fill: #CCDAF4;
+	}
+}
+
+.attach-area__pay {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	color: library.$primary-link-color;
+	background-color: $pay-button-color;
+	padding: 20px;
+	border-radius: 30px;
+
+	span {
+		margin-left: 20px;
+	}
+}

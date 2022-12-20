@@ -1,0 +1,74 @@
+@use './global/library.scss';
+
+$card-background: #5957DB;
+$card-border-radius: 8px;
+$chip-background: #ECF2FF;
+$card-name-color: #FFFFFF;
+$chip-border-radius: 2px;
+
+.card {
+	background-color: $card-background;
+	border-radius: $card-border-radius;
+	padding: 30px;
+	box-shadow: 0px 8px 20px rgba(89, 87, 219, 0.6);
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 15px;
+}
+
+.card__chip {
+	width: 35px;
+	height: 18px;
+	background-color: $chip-background;
+	border-radius: $chip-border-radius;
+	margin-bottom: 5px;
+}
+
+.card__name {
+	font-size: 14px;
+	line-height: 18px;
+	color: $card-name-color;
+
+	grid-column: 3 / -1;
+	grid-row: 1 / 2;
+	justify-self: end;
+	margin-bottom: 5px;
+}
+
+.card__static-number {
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	gap: 15px;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 700;
+	font-family: library.$secondary-font;
+	color: $card-name-color;
+	grid-column: 1 / -1;
+	grid-row: 2 / 3;
+
+	span {
+		color: inherit;
+		font-size: 14px;
+		line-height: 16px;
+		font-weight: 700;
+		font-family: library.$secondary-font;
+	}
+}
+
+.card__cardholder-name {
+	color: $card-name-color;
+	font-size: 12px;
+	line-height: 14px;
+	opacity: 0.5;
+	grid-column: 1 / 4;
+}
+
+.card__expiry-date {
+	color: $card-name-color;
+	font-size: 12px;
+	line-height: 14px;
+	opacity: 0.5;
+	justify-self: end;
+}

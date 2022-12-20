@@ -1,0 +1,72 @@
+@use './global/library.scss';
+
+$ticket-header-radius: 8px 8px 0 0;
+$data-term-color: #AAAAAA;
+$data-value-color: #666666;
+
+.ticket {
+	dl {
+		padding: 20px 30px;
+		background-color: library.$primary-link-color;
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		gap: 20px;
+	}
+	dt {
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 400;
+		color: $data-term-color;
+	}
+
+	dd {
+		color: $data-value-color;
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 700;
+	}
+}
+
+.ticket__header {
+	background-color: #43D000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 30px;
+	border-radius: $ticket-header-radius;
+
+	h3,
+	p {
+		color: library.$primary-link-color;
+		font-size: 16px;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+}
+
+.ticket__footer {
+	padding: 30px;
+	background-color: library.$primary-link-color;
+	border-top: 2px dashed #ECF2FF;
+
+	position: relative;
+
+	&::before,
+	&::after {
+		content: '';
+		clip-path: circle(50.0% at 100% 50%);
+		width: 16px;
+		height: 16px;
+		background-color: library.$primary-color;
+		position: absolute;
+		top: -10px;
+		right: 0;
+	}
+
+	&::before {
+		right: 0;
+		left: 0;
+		clip-path: circle(50.0% at 0 50%);
+	}
+}
+

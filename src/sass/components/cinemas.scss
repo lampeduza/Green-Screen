@@ -1,0 +1,52 @@
+@use './global/library.scss';
+
+$border-list-color: #FFFFFF;
+$container-border-radius: 8px;
+
+.cinemas__container {
+	border: 2px solid $border-list-color;
+	background-color: $border-list-color;
+	border-radius: $container-border-radius;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	width: 100%;
+}
+
+.cinemas__content {
+	display: flex;
+	align-items: center;
+	padding: 14px 24px;
+
+	span {
+		margin-right: 16px;
+		text-transform: uppercase;
+	}
+}
+
+.cinemas__list {
+	@include library.reset-list;
+	width: 100%;
+
+	position: absolute;
+	top: 44px;
+	left: -2px;
+	border: 2px solid $border-list-color;
+	border-radius: 0 0 $container-border-radius $container-border-radius;
+	background-color: $border-list-color;
+	background-color: $border-list-color;
+	padding-top: 4px;
+	z-index: 1;
+
+	display: none;
+}
+
+.cinemas__link {
+	display: block;
+	padding: 14px 24px;
+	color: inherit;
+	text-transform: uppercase;
+}
+
+
+

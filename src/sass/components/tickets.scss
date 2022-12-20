@@ -1,0 +1,9 @@
+@use './global/library.scss';
+
+.tickets {
+	background-color: library.$primary-color;
+}
+
+.tickets__wrapper {
+	padding: 40px 60px;
+}

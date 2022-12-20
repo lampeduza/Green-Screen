@@ -1,0 +1,30 @@
+@use './global/library.scss';
+
+.toolbar {
+	padding: 11px 30px;
+	border-radius: library.$link-border-radius 0 0 library.$link-border-radius;
+	font-size: 14px;
+	line-height: 16px;
+
+	span {
+		color: library.$primary-link-color;
+		font-size: inherit;
+		line-height: inherit;
+		text-transform: uppercase;
+		margin-left: 12px;
+	}
+
+	&:focus,
+	&:active {
+		background-color: library.$active-link-bg-color;
+
+		span {
+			color: library.$primary-color;
+		}
+
+		svg {
+			stroke: library.$primary-link-color;
+			fill: library.$svg-fill-color-active;
+		}
+	}
+}
