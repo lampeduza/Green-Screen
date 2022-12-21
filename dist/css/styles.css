@@ -163,6 +163,12 @@ picture {
   padding-right: 60px;
 }
 
+.logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .breadcrumbs {
   margin: 0;
   padding: 0;
@@ -171,6 +177,9 @@ picture {
   display: flex;
   flex-wrap: wrap;
   max-width: 895px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .breadcrumbs__item {
@@ -198,6 +207,9 @@ picture {
   position: relative;
   z-index: 0;
   width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .cinemas__content {
@@ -248,6 +260,9 @@ picture {
   grid-template-rows: repeat(2, auto);
   gap: 50px;
   background-color: #5957DB;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .navigation__list {
@@ -367,6 +382,9 @@ picture {
   display: grid;
   grid-template-columns: 80px auto 80px;
   gap: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .slider__list {
@@ -471,6 +489,9 @@ picture {
   flex-wrap: wrap;
   font-size: 16px;
   line-height: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .schedule__list dt {
   margin-right: 83px;
@@ -527,6 +548,9 @@ picture {
   -webkit-box-align: center;
           align-items: center;
   justify-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .screen h2 {
   color: #CCDAF4;
@@ -540,6 +564,132 @@ picture {
 .screen picture {
   grid-column: 1/-1;
   grid-row: 1/-1;
+}
+
+.seats__table {
+  border-collapse: collapse;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.seats__row {
+  display: grid;
+  grid-template-columns: auto repeat(9, 1fr);
+  -webkit-box-align: center;
+          align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.seats__row:last-of-type {
+  margin-bottom: 0;
+}
+
+.seats__seat {
+  text-transform: uppercase;
+}
+.seats__seat--caption {
+  font-size: 18px;
+  line-height: 20px;
+  color: #666666;
+}
+.seats__seat button {
+  border: none;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+}
+.seats__seat button svg use {
+  stroke: #ECF2FF;
+  fill: #ECF2FF;
+}
+.seats__seat span {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.seats__seat--taken button {
+  cursor: not-allowed;
+}
+.seats__seat--taken button span {
+  color: #CCDAF4;
+}
+.seats__seat--taken button svg use {
+  stroke: #ECF2FF;
+  fill: transparent;
+}
+.seats__seat--free button span {
+  color: #5957DB;
+}
+.seats__seat--free button svg use {
+  stroke: transparent;
+  fill: #ECF2FF;
+}
+.seats__seat--free button:hover span, .seats__seat--free button:focus span, .seats__seat--free button:active span {
+  color: #ffffff;
+}
+.seats__seat--free button:hover svg use, .seats__seat--free button:focus svg use, .seats__seat--free button:active svg use {
+  stroke: transparent;
+  fill: #43D000;
+}
+.seats__seat--chosen button span {
+  color: #ffffff;
+}
+.seats__seat--chosen button svg use {
+  stroke: transparent;
+  fill: #43D000;
+}
+
+.hint__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  -webkit-box-pack: start;
+          justify-content: start;
+  gap: 72px;
+}
+
+.hint__item {
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-box-align: center;
+          align-items: center;
+  gap: 12px;
+  color: #666;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.hint__item::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+.hint__item--taken::before {
+  background-color: white;
+  border-color: #ECF2FF;
+}
+.hint__item--free::before {
+  background-color: #ECF2FF;
+  border-color: #ECF2FF;
+}
+.hint__item--chosen::before {
+  background-color: #43D000;
+  border-color: #43D000;
 }
 
 .tickets {

@@ -7,6 +7,7 @@
 	grid-template-rows: repeat(2, auto);
 	gap: 50px;
 	background-color: library.$svg-fill-color-active;
+	user-select: none;
 
 }
 

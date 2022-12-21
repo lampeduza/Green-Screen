@@ -1,0 +1,59 @@
+@use './global/library.scss';
+
+$_item-color: #666;
+$_item-font-size: 16px;
+$_item-line-height: 20px;
+$_item-font-weight: 400;
+$_item-border-radius: 4px;
+
+.hint__list {
+	@include library.reset-list;
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	justify-content: start;
+	gap: 72px;
+}
+
+.hint__item {
+	display: grid;
+	grid-template-columns: 24px auto;
+	align-items: center;
+	gap: 12px;
+
+	color: $_item-color;
+	font-size: $_item-font-size;
+	line-height: $_item-line-height;
+	font-weight: $_item-font-weight;
+
+	position: relative;
+	user-select: none;
+
+	&::before {
+		content: '';
+		width: 24px;
+		height: 24px;
+		border: 2px solid transparent;
+		border-radius: $_item-border-radius;
+	}
+
+	&--taken {
+		&::before {
+			background-color: white;
+		border-color: #ECF2FF;
+		}
+	}
+
+	&--free {
+		&::before {
+			background-color: #ECF2FF;
+			border-color: #ECF2FF;
+		}
+	}
+
+	&--chosen {
+		&::before {
+			background-color: #43D000;
+			border-color: #43D000;
+		}
+	}
+}

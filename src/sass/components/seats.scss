@@ -1,0 +1,126 @@
+$_table-caption-size: 18px;
+$_table-caption-line-height: 20px;
+$_table-caption-color: #666666;
+
+$_seat-free-color: #5957DB;
+$_seat-free-bg-color: #ECF2FF;
+
+$_seat-taken-color: #CCDAF4;
+$_seat-taken-bg-color: #ECF2FF;
+
+$_seat-choose-color: #ffffff;
+$_seat-choose-bg-color: #43D000;
+
+.seats__table {
+	border-collapse: collapse;
+	width: 100%;
+	user-select: none;
+}
+
+.seats__row {
+	display: grid;
+	grid-template-columns: auto repeat(9, 1fr);
+	align-items: center;
+	gap: 30px;
+	margin-bottom: 30px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.seats__seat {
+	text-transform: uppercase;
+
+	&--caption {
+		font-size: $_table-caption-size;
+		line-height: $_table-caption-line-height;
+		color: $_table-caption-color;
+	}
+
+	button {
+		border: none;
+		position: relative;
+		background-color: transparent;
+		cursor: pointer;
+
+		svg {
+			use {
+				stroke: #ECF2FF;
+				fill: #ECF2FF;
+			}
+		}
+	}
+
+	span {
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&--taken {
+		button {
+			cursor: not-allowed;
+
+			span {
+				color: #CCDAF4;
+			}
+
+			svg {
+				use {
+					stroke: #ECF2FF;
+					fill: transparent;
+				}
+			}
+		}
+	}
+
+	&--free {
+		button {
+			span {
+				color: $_seat-free-color;
+			}
+
+			svg {
+				use {
+					stroke: transparent;
+					fill: #ECF2FF;
+				}
+			}
+
+			&:hover,
+			&:focus,
+			&:active {
+				span {
+					color: $_seat-choose-color;
+				}
+
+				svg {
+					use {
+						stroke: transparent;
+						fill: $_seat-choose-bg-color;
+					}
+				}
+			}
+		}
+	}
+
+	&--chosen {
+		button {
+			span {
+				color: $_seat-choose-color;
+			}
+
+			svg {
+				use {
+					stroke: transparent;
+					fill: $_seat-choose-bg-color;
+				}
+			}
+		}
+	}
+}

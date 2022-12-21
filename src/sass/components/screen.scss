@@ -7,6 +7,7 @@ $_title-line-height: 20px;
 	grid-template-columns: auto;
 	align-items: center;
 	justify-items: center;
+	user-select: none;
 
 	h2 {
 		color: $_title-color;
