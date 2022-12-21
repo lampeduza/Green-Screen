@@ -105,17 +105,14 @@ html(lang="ru-RU")
                 a.slider__link(href="#")
                   h3.slider__header 24 сентября
                   h4.slider__day суббота
-            ul.slider__controls
-              li.slider__control.slider__control--previous
-                button.slider__button(type="button")
-                  svg(width="13" height="22")
-                    use(xlink:href="img/sprite.svg#slider-left")
-                  span.visually-hidden Предыдущий слайд
-              li.slider__control.slider__control--next
-                button.slider__button(type="button")
-                  svg(width="13" height="22")
-                    use(xlink:href="img/sprite.svg#slider-left")
-                  span.visually-hidden Следующий слайд
+            button.slider__button.slider__button--previous(type="button")
+              svg(width="13" height="22")
+                use(xlink:href="img/sprite.svg#slider-left")
+              span.visually-hidden Предыдущий слайд
+            button.slider__button.slider__button--next(type="button")
+              svg(width="13" height="22")
+                use(xlink:href="img/sprite.svg#slider-left")
+              span.visually-hidden Следующий слайд
           //- SCHEDULE COMPONENT
           section.interface__schedule.schedule
             h2.visually-hidden Выберете формат фильма и время

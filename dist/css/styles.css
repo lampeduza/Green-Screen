@@ -347,6 +347,136 @@ picture {
   padding: 60px;
 }
 
+.interface__slider {
+  margin-bottom: 60px;
+}
+
+.interface__schedule {
+  margin-bottom: 20px;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: 80px auto 80px;
+  gap: 30px;
+}
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  grid-column: 2/3;
+  overflow-x: hidden;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.slider__item {
+  margin-right: 30px;
+  background-color: #43D000;
+  -webkit-box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
+          box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
+  border-radius: 8px;
+  text-align: center;
+  min-width: 300px;
+}
+.slider__item a {
+  display: block;
+  padding: 30px;
+  cursor: default;
+}
+.slider__item:last-child {
+  margin-right: 0;
+}
+.slider__item h3 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+.slider__item h4 {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.slider__item:not(.slider__item--chosen) {
+  background-color: #ECF2FF;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.slider__item:not(.slider__item--chosen) a {
+  cursor: pointer;
+}
+.slider__item:not(.slider__item--chosen) h3 {
+  color: #5957DB;
+}
+.slider__item:not(.slider__item--chosen) h4 {
+  color: #5957DB;
+}
+
+.slider__button {
+  cursor: pointer;
+  background-color: #ECF2FF;
+  border: none;
+}
+.slider__button svg {
+  fill: transparent;
+  stroke: #CCDAF4;
+}
+.slider__button--previous {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+}
+.slider__button--next {
+  grid-column: 3/4;
+  grid-row: 1/-1;
+}
+.slider__button--next svg {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.schedule__list {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: start;
+          align-items: start;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 20px;
+}
+.schedule__list dt {
+  margin-right: 83px;
+  color: #666666;
+  padding: 20px 0;
+}
+.schedule__list dd {
+  margin-right: 30px;
+  margin-bottom: 40px;
+}
+.schedule__list dd:last-of-type {
+  margin-right: 0;
+}
+.schedule__list dd:nth-of-type(3n + 4) {
+  margin-left: 110px;
+}
+.schedule__list a {
+  display: block;
+  min-width: 190px;
+  border-radius: 30px;
+  background-color: #ECF2FF;
+  padding: 20px 30px;
+  text-align: center;
+}
+
 .tickets {
   background-color: #5957DB;
 }
