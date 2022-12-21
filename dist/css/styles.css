@@ -355,6 +355,10 @@ picture {
   margin-bottom: 20px;
 }
 
+.interface__screen {
+  margin-bottom: 40px;
+}
+
 .slider {
   display: grid;
   grid-template-columns: 80px auto 80px;
@@ -475,6 +479,27 @@ picture {
   background-color: #ECF2FF;
   padding: 20px 30px;
   text-align: center;
+}
+
+.screen {
+  display: grid;
+  grid-template-columns: auto;
+  -webkit-box-align: center;
+          align-items: center;
+  justify-items: center;
+}
+.screen h2 {
+  color: #CCDAF4;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+.screen picture {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
 }
 
 .tickets {

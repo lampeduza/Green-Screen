@@ -1,0 +1,26 @@
+$_title-color: #CCDAF4;
+$_title-size: 16px;
+$_title-line-height: 20px;
+
+.screen {
+	display: grid;
+	grid-template-columns: auto;
+	align-items: center;
+	justify-items: center;
+
+	h2 {
+		color: $_title-color;
+		font-size: $_title-size;
+		line-height: $_title-line-height;
+		text-transform: uppercase;
+		margin-top: 10px;
+
+		grid-column: 1 / -1;
+		grid-row: 1 / -1;
+	}
+
+	picture {
+		grid-column: 1 / -1;
+		grid-row: 1 / -1;
+	}
+}
