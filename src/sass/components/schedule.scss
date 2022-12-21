@@ -2,6 +2,8 @@ $description-term-color: #666666;
 
 $description-value-color: #ECF2FF;
 $description-value-border-radius: 30px;
+$schedule-link-color: #5957DB;
+$schedule-link-color-chosen: #ffffff;
 
 .schedule__list {
 	display: flex;
@@ -15,26 +17,55 @@ $description-value-border-radius: 30px;
 		color: $description-term-color;
 		padding: 20px 0;
 	}
+}
 
-	dd {
-		margin-right: 30px;
-		margin-bottom: 40px;
+.schedule__value {
+	margin-right: 30px;
+	margin-bottom: 40px;
 
-		&:last-of-type {
-			margin-right: 0;
-		}
+	&:last-of-type {
+		margin-right: 0;
+	}
 
-		&:nth-of-type(3n + 4) {
-			margin-left: 110px;
-		}
+	&:nth-of-type(3n + 4) {
+		margin-left: 110px;
 	}
 
 	a {
 		display: block;
 		min-width: 190px;
 		border-radius: $description-value-border-radius;
-		background-color: $description-value-color;
+		background-color: #43D000;
+		box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
 		padding: 20px 30px;
 		text-align: center;
+		color: $schedule-link-color-chosen;
+		cursor: default;
+
+		&:hover,
+		&:focus,
+		&:active {
+			box-shadow: none;
+			color: $schedule-link-color;
+			background-color: $description-value-color;
+			cursor: pointer;
+		}
+	}
+
+	&:not(&--chosen) {
+		a {
+			color: $schedule-link-color;
+			background-color: $description-value-color;
+			box-shadow: none;
+			cursor: pointer;
+
+			&:hover,
+			&:focus,
+			&:active {
+				box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
+				background-color: #43D000;
+				color: $schedule-link-color-chosen;
+			}
+		}
 	}
 }
