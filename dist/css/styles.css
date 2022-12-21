@@ -692,6 +692,10 @@ picture {
   border-color: #43D000;
 }
 
+.additional {
+  background-color: #ECF2FF;
+}
+
 .tickets {
   background-color: #5957DB;
 }
