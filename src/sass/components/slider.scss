@@ -7,7 +7,7 @@ $item-border-radius: 8px;
 
 .slider {
 	display: grid;
-	grid-template-columns: 80px auto 80px;
+	grid-template-columns: 80px 1fr 80px;
 	gap: 30px;
 	user-select: none;
 }
@@ -16,17 +16,19 @@ $item-border-radius: 8px;
 	@include library.reset-list;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	padding: 2px;
 
 	grid-column: 2 / 3;
 	overflow-x: hidden;
-	width: min-content;
+	width: 100%;
 }
 
 .slider__item {
 	margin-right: 30px;
 	text-align: center;
-	min-width: 300px;
+	max-width: 300px;
+  width: 31.12%;
 
 	a {
 		display: block;
@@ -86,6 +88,7 @@ $item-border-radius: 8px;
 	cursor: pointer;
 	background-color: $item-not-active;
 	border: none;
+	width: 100%;
 
 	&:focus,
 	&:active {

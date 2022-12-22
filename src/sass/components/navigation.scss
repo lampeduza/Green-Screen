@@ -1,20 +1,20 @@
 @use './global/library.scss';
 
 .navigation {
-	padding: 20px 0 20px 30px;
 	display: grid;
 	grid-template-columns: auto;
-	grid-template-rows: repeat(2, auto);
+	justify-content: end;
 	gap: 50px;
 	background-color: library.$svg-fill-color-active;
 	user-select: none;
-
+	padding: 20px 0 20px 30px;
 }
 
 .navigation__list {
 	@include library.reset-list;
 	max-height: 564px;
 	overflow-y: auto;
+	width: 230px;
 
 	&::-webkit-scrollbar {
     width: 3px;
@@ -62,6 +62,7 @@
 	}
 
 	svg {
+		flex-shrink: 0;
 		stroke: library.$svg-stroke-color;
 		fill: library.$primary-link-color;
 	}

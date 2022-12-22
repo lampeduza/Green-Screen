@@ -251,18 +251,20 @@ picture {
 .main {
   display: grid;
   grid-template-columns: 260px 1fr 360px;
+  gap: 58px;
 }
 
 .navigation {
-  padding: 20px 0 20px 30px;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: repeat(2, auto);
+  -webkit-box-pack: end;
+          justify-content: end;
   gap: 50px;
   background-color: #5957DB;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  padding: 20px 0 20px 30px;
 }
 
 .navigation__list {
@@ -271,6 +273,7 @@ picture {
   list-style-type: none;
   max-height: 564px;
   overflow-y: auto;
+  width: 230px;
 }
 .navigation__list::-webkit-scrollbar {
   width: 3px;
@@ -312,6 +315,7 @@ picture {
   text-transform: uppercase;
 }
 .navigation__link svg {
+  flex-shrink: 0;
   stroke: transparent;
   fill: #FFFFFF;
 }
@@ -359,7 +363,7 @@ picture {
 }
 
 .interface__wrapper {
-  padding: 60px;
+  padding: 60px 0;
 }
 
 .interface__slider {
@@ -380,7 +384,7 @@ picture {
 
 .slider {
   display: grid;
-  grid-template-columns: 80px auto 80px;
+  grid-template-columns: 80px 1fr 80px;
   gap: 30px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -395,18 +399,19 @@ picture {
   display: flex;
   -webkit-box-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   padding: 2px;
   grid-column: 2/3;
   overflow-x: hidden;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+  width: 100%;
 }
 
 .slider__item {
   margin-right: 30px;
   text-align: center;
-  min-width: 300px;
+  max-width: 300px;
+  width: 31.12%;
 }
 .slider__item a {
   display: block;
@@ -456,6 +461,7 @@ picture {
   cursor: pointer;
   background-color: #ECF2FF;
   border: none;
+  width: 100%;
 }
 .slider__button:focus, .slider__button:active {
   outline: 2px solid blue;
@@ -502,6 +508,8 @@ picture {
 .schedule__value {
   margin-right: 30px;
   margin-bottom: 40px;
+  max-width: 190px;
+  width: 100%;
 }
 .schedule__value:last-of-type {
   margin-right: 0;
@@ -511,7 +519,6 @@ picture {
 }
 .schedule__value a {
   display: block;
-  min-width: 190px;
   border-radius: 30px;
   background-color: #43D000;
   -webkit-box-shadow: 0px 8px 20px rgba(67, 208, 0, 0.6);
@@ -576,10 +583,10 @@ picture {
 
 .seats__row {
   display: grid;
-  grid-template-columns: auto repeat(9, 1fr);
+  grid-template-columns: 70px repeat(9, 8%);
   -webkit-box-align: center;
           align-items: center;
-  gap: 30px;
+  gap: 2.47%;
   margin-bottom: 30px;
 }
 .seats__row:last-of-type {
@@ -588,6 +595,10 @@ picture {
 
 .seats__seat {
   text-transform: uppercase;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 .seats__seat--caption {
   font-size: 18px;
@@ -599,6 +610,8 @@ picture {
   position: relative;
   background-color: transparent;
   cursor: pointer;
+  display: -webkit-box;
+  display: flex;
 }
 .seats__seat button svg use {
   stroke: #ECF2FF;
@@ -704,6 +717,9 @@ picture {
   padding: 40px 60px;
 }
 
+.ticket {
+  max-width: 240px;
+}
 .ticket dl {
   padding: 20px 30px;
   background-color: #FFFFFF;
@@ -788,6 +804,7 @@ picture {
   padding: 0;
   list-style-type: none;
   margin-bottom: 20px;
+  max-width: 240px;
 }
 
 .card {
@@ -873,8 +890,7 @@ picture {
 }
 
 .attach-area__pay {
-  display: inline-block;
-  width: 100%;
+  display: block;
   text-align: center;
   color: #FFFFFF;
   background-color: #43D000;

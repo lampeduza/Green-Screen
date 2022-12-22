@@ -5,6 +5,8 @@ $data-term-color: #AAAAAA;
 $data-value-color: #666666;
 
 .ticket {
+	max-width: 240px;
+	
 	dl {
 		padding: 20px 30px;
 		background-color: library.$primary-link-color;

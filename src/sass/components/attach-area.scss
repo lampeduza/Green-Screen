@@ -22,8 +22,7 @@ $pay-button-radius: 30px;
 }
 
 .attach-area__pay {
-	display: inline-block;
-	width: 100%;
+	display: block;
 	text-align: center;
 	color: library.$primary-link-color;
 	background-color: $pay-button-color;

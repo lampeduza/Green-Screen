@@ -19,9 +19,9 @@ $_seat-choose-bg-color: #43D000;
 
 .seats__row {
 	display: grid;
-	grid-template-columns: auto repeat(9, 1fr);
+	grid-template-columns: 70px repeat(9, 8%);
 	align-items: center;
-	gap: 30px;
+	gap: 2.47%;
 	margin-bottom: 30px;
 
 	&:last-of-type {
@@ -31,6 +31,8 @@ $_seat-choose-bg-color: #43D000;
 
 .seats__seat {
 	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
 
 	&--caption {
 		font-size: $_table-caption-size;
@@ -43,6 +45,7 @@ $_seat-choose-bg-color: #43D000;
 		position: relative;
 		background-color: transparent;
 		cursor: pointer;
+		display: flex;
 
 		svg {
 			use {
