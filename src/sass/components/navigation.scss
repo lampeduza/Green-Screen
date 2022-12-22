@@ -8,6 +8,10 @@
 	background-color: library.$svg-fill-color-active;
 	user-select: none;
 	padding: 20px 0 20px 30px;
+
+	@media (max-width: library.$desktop-m) {
+		padding: 20px 0 20px 0;
+	}
 }
 
 .navigation__list {
@@ -45,6 +49,14 @@
 			}
 		}
 	}
+
+	@media (max-width: library.$desktop-s) {
+		&--current {
+			.navigation__link {
+				border-radius: 0;
+			}
+		}
+	}
 }
 
 .navigation__link {
@@ -79,6 +91,11 @@
 			stroke: library.$primary-link-color;
 			fill: library.$svg-fill-color-active;
 		}
+	}
+
+	@media (max-width: library.$desktop-s) {
+		padding: 15px 20px;
+		border-radius: 0;
 	}
 }
 

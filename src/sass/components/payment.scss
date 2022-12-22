@@ -1,3 +1,5 @@
+@use './global/library.scss';
+
 $background: #ECF2FF;
 $title-color: #666666;
 
@@ -7,6 +9,10 @@ $title-color: #666666;
 
 .payment__wrapper {
 	padding: 40px 60px;
+
+	@media (max-width: library.$desktop-l) {
+		padding: 40px 30px;
+	}
 }
 
 .payment__title {

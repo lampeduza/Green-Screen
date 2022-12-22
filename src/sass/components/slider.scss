@@ -10,6 +10,15 @@ $item-border-radius: 8px;
 	grid-template-columns: 80px 1fr 80px;
 	gap: 30px;
 	user-select: none;
+
+	@media (max-width: library.$desktop-m) {
+		grid-template-columns: 60px 1fr 60px;
+		gap: 15px;
+	}
+
+	@media (max-width: library.$desktop-s) {
+		grid-template-columns: 40px 1fr 40px;
+	}
 }
 
 .slider__list {
@@ -17,7 +26,6 @@ $item-border-radius: 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 2px;
 
 	grid-column: 2 / 3;
 	overflow-x: hidden;
@@ -47,6 +55,10 @@ $item-border-radius: 8px;
 			background-color: $item-not-active;
 			cursor: pointer;
 		}
+
+		@media (max-width: library.$desktop-l) {
+			padding: 20px 17px;
+		}
 	}
 
 
@@ -58,12 +70,37 @@ $item-border-radius: 8px;
 		font-size: 24px;
 		line-height: 30px;
 		margin-bottom: 10px;
+
+		@media (max-width: library.$desktop-l) {
+			font-size: 22px;
+			line-height: 26px;
+		}
+
+		@media (max-width: library.$desktop-m) {
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		@media (max-width: library.$desktop-s) {
+			font-size: 16px;
+			line-height: 20px;
+		}
 	}
 
 	h4 {
 		font-size: 16px;
 		line-height: 20px;
 		font-weight: 400;
+
+		@media (max-width: library.$desktop-l) {
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		@media (max-width: library.$desktop-m) {
+			font-size: 12px;
+			line-height: 16px;
+		}
 	}
 
 	&:not(&--chosen) {
@@ -81,6 +118,10 @@ $item-border-radius: 8px;
 				color: $item-color-chosen;
 			}
 		}
+	}
+
+	@media (max-width: library.$desktop-m) {
+		 margin-right: 15px;
 	}
 }
 

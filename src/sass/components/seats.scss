@@ -21,7 +21,7 @@ $_seat-choose-bg-color: #43D000;
 	display: grid;
 	grid-template-columns: 70px repeat(9, 8%);
 	align-items: center;
-	gap: 2.47%;
+	justify-content: space-between;
 	margin-bottom: 30px;
 
 	&:last-of-type {

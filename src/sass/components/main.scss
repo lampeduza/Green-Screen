@@ -1,5 +1,16 @@
+@use './global/library.scss';
+
 .main {
 	display: grid;
 	grid-template-columns: 260px 1fr 360px;
-	gap: 58px;
+	gap: 60px;
+
+	@media (max-width: library.$desktop-l) {
+		grid-template-columns: 260px 1fr auto;
+		gap: 30px;
+	}
+
+	@media (max-width: library.$desktop-s) {
+		grid-template-columns: 230px 1fr auto;
+	}
 }

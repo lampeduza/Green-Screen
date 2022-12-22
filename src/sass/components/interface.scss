@@ -1,5 +1,11 @@
+@use './global/library.scss';
+
 .interface__wrapper {
 	padding: 60px 0;
+
+	@media (max-width: library.$desktop-l) {
+		padding: 30px 0;
+	}
 }
 
 .interface__slider {

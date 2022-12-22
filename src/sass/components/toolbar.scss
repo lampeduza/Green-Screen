@@ -27,4 +27,9 @@
 			fill: library.$svg-fill-color-active;
 		}
 	}
+
+	@media (max-width: library.$desktop-s) {
+		padding: 11px 20px;
+		border-radius: 0;
+	}
 }
