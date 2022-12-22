@@ -51,7 +51,7 @@ body {
   grid-template-columns: auto;
   grid-template-rows: auto 1fr;
   min-height: 100vh;
-  max-width: 1920px;
+  max-width: 2560px;
   margin: 0 auto;
 }
 
@@ -581,7 +581,6 @@ picture {
 .slider__item {
   margin-right: 30px;
   text-align: center;
-  max-width: 300px;
   width: 31.12%;
 }
 .slider__item a {
