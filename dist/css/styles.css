@@ -259,7 +259,7 @@ picture {
     gap: 30px;
   }
 }
-@media (max-width: 1319px) {
+@media (max-width: 1559px) {
   .main {
     grid-template-columns: 230px 1fr auto;
   }
@@ -314,7 +314,7 @@ picture {
   stroke: #FFFFFF;
   fill: #5957DB;
 }
-@media (max-width: 1319px) {
+@media (max-width: 1559px) {
   .navigation__item--current .navigation__link {
     border-radius: 0;
   }
@@ -350,7 +350,7 @@ picture {
   stroke: #FFFFFF;
   fill: #5957DB;
 }
-@media (max-width: 1319px) {
+@media (max-width: 1559px) {
   .navigation__link {
     padding: 15px 20px;
     border-radius: 0;
@@ -810,6 +810,11 @@ picture {
     padding: 40px 30px;
   }
 }
+@media (max-width: 1559px) {
+  .tickets__wrapper {
+    padding: 20px 15px;
+  }
+}
 
 .ticket {
   width: 240px;
@@ -887,6 +892,11 @@ picture {
 @media (max-width: 1699px) {
   .payment__wrapper {
     padding: 40px 30px;
+  }
+}
+@media (max-width: 1559px) {
+  .payment__wrapper {
+    padding: 20px 15px;
   }
 }
 

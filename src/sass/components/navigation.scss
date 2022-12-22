@@ -50,7 +50,7 @@
 		}
 	}
 
-	@media (max-width: library.$desktop-s) {
+	@media (max-width: library.$desktop-m) {
 		&--current {
 			.navigation__link {
 				border-radius: 0;
@@ -93,7 +93,7 @@
 		}
 	}
 
-	@media (max-width: library.$desktop-s) {
+	@media (max-width: library.$desktop-m) {
 		padding: 15px 20px;
 		border-radius: 0;
 	}

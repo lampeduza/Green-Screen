@@ -10,4 +10,8 @@
 	@media (max-width: library.$desktop-l) {
 		padding: 40px 30px;
 	}
+
+	@media (max-width: library.$desktop-m) {
+		padding: 20px 15px;
+	}
 }
