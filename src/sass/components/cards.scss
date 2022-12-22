@@ -4,4 +4,8 @@
 	@include library.reset-list;
 	margin-bottom: 20px;
 	max-width: 240px;
+
+	@media (max-width: library.$desktop-m) {
+		margin-bottom: 30px;
+	}
 }

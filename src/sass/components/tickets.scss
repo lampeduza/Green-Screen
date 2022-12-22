@@ -2,6 +2,12 @@
 
 .tickets {
 	background-color: library.$primary-color;
+
+	@media (max-width: library.$desktop-m) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 .tickets__wrapper {
@@ -12,6 +18,6 @@
 	}
 
 	@media (max-width: library.$desktop-m) {
-		padding: 20px 15px;
+		padding: 0;
 	}
 }

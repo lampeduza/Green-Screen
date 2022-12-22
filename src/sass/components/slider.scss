@@ -12,12 +12,11 @@ $item-border-radius: 8px;
 	user-select: none;
 
 	@media (max-width: library.$desktop-m) {
-		grid-template-columns: 60px 1fr 60px;
-		gap: 15px;
+		grid-template-columns: 100px 1fr 100px;
 	}
 
-	@media (max-width: library.$desktop-s) {
-		grid-template-columns: 40px 1fr 40px;
+	@media (max-width: library.$tablet-l) {
+		grid-template-columns: 60px 1fr 60px;
 	}
 }
 
@@ -55,10 +54,6 @@ $item-border-radius: 8px;
 			background-color: $item-not-active;
 			cursor: pointer;
 		}
-
-		@media (max-width: library.$desktop-l) {
-			padding: 20px 17px;
-		}
 	}
 
 
@@ -76,15 +71,15 @@ $item-border-radius: 8px;
 			line-height: 26px;
 		}
 
-		@media (max-width: library.$desktop-m) {
-			font-size: 16px;
-			line-height: 20px;
-		}
+		// @media (max-width: library.$desktop-m) {
+		// 	font-size: 18px;
+		// 	line-height: 24px;
+		// }
 
-		@media (max-width: library.$desktop-s) {
-			font-size: 16px;
-			line-height: 20px;
-		}
+		// @media (max-width: library.$desktop-s) {
+		// 	font-size: 16px;
+		// 	line-height: 20px;
+		// }
 	}
 
 	h4 {
@@ -97,10 +92,10 @@ $item-border-radius: 8px;
 			line-height: 18px;
 		}
 
-		@media (max-width: library.$desktop-m) {
-			font-size: 12px;
-			line-height: 16px;
-		}
+		// @media (max-width: library.$desktop-m) {
+		// 	font-size: 12px;
+		// 	line-height: 16px;
+		// }
 	}
 
 	&:not(&--chosen) {
@@ -121,7 +116,8 @@ $item-border-radius: 8px;
 	}
 
 	@media (max-width: library.$desktop-m) {
-		 margin-right: 15px;
+		 max-width: 100%;
+		 width: 100%;
 	}
 }
 

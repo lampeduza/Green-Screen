@@ -12,6 +12,10 @@
 		line-height: inherit;
 		text-transform: uppercase;
 		margin-left: 12px;
+
+		@media (max-width: library.$desktop-s) {
+			display: none;
+		}
 	}
 
 	&:focus,

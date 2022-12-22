@@ -29,4 +29,9 @@ $breadcrumbs-link-active-color: #666666;
 	svg {
 		margin-left: 16px;
 	}
+
+	@media (max-width: library.$desktop-s) {
+		font-size: 14px;
+		line-height: 18px;
+	}
 }

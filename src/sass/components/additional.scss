@@ -1,5 +1,12 @@
+@use './global/library.scss';
+
 $background: #ECF2FF;
 
 .additional {
 	background-color: $background;
+
+	@media (max-width: library.$desktop-m) {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+	}
 }

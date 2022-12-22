@@ -11,6 +11,6 @@
 	}
 
 	@media (max-width: library.$desktop-m) {
-		grid-template-columns: 230px 1fr auto;
+		grid-template-columns: auto;
 	}
 }

@@ -1,7 +1,15 @@
+@use './global/library.scss';
+
 $header-color: #ECF2FF;
 
 .header {
 	background-color: $header-color;
+
+	.container {
+		@media (max-width: library.$desktop-s) {
+			padding: 20px 40px;
+		}
+	}
 }
 
 .header__wrapper {
@@ -11,4 +19,8 @@ $header-color: #ECF2FF;
 	gap: 100px;
 	padding-top: 16px;
 	padding-bottom: 16px;
+
+	@media (max-width: library.$desktop-s) {
+		gap: 40px;
+	}
 }

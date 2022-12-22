@@ -12,6 +12,10 @@ $container-border-radius: 8px;
 	z-index: 0;
 	width: 100%;
 	user-select: none;
+
+	@media (max-width: library.$desktop-s) {
+		border-width: 1px;
+	}
 }
 
 .cinemas__content {
@@ -22,6 +26,16 @@ $container-border-radius: 8px;
 	span {
 		margin-right: 16px;
 		text-transform: uppercase;
+
+		@media (max-width: library.$desktop-s) {
+			margin-right: 10px;
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+
+	@media (max-width: library.$desktop-s) {
+		padding: 10px 20px;
 	}
 }
 
@@ -38,8 +52,13 @@ $container-border-radius: 8px;
 	background-color: $border-list-color;
 	padding-top: 4px;
 	z-index: 1;
-
 	display: none;
+
+	@media (max-width: library.$desktop-s) {
+		border-width: 1px;
+		left: -1px;
+		top: 34px;
+	}
 }
 
 .cinemas__link {
@@ -47,6 +66,12 @@ $container-border-radius: 8px;
 	padding: 14px 24px;
 	color: inherit;
 	text-transform: uppercase;
+
+	@media (max-width: library.$desktop-s) {
+		font-size: 14px;
+		line-height: 18px;
+		padding: 10px 20px;
+	}
 }
 
 

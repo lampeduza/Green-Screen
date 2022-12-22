@@ -7,6 +7,11 @@ $pay-button-radius: 30px;
 
 .attach-area {
 	margin-bottom: 60px;
+
+	@media (max-width: library.$desktop-m) {
+		margin-bottom: 40px;
+		max-width: 100%;
+	}
 }
 
 .attach-area__link {
