@@ -10,10 +10,18 @@
 	@media (max-width: library.$desktop-m) {
 		padding: 0 40px;
 	}
+
+	@media (max-width: library.$tablet-l) {
+		padding: 0 15px;
+	}
 }
 
 .interface__slider {
 	margin-bottom: 60px;
+
+	@media (max-width: library.$desktop-m) {
+		margin-bottom: 30px;
+	}
 }
 
 .interface__schedule {

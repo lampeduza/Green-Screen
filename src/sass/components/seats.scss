@@ -1,3 +1,5 @@
+@use './global/library.scss';
+
 $_table-caption-size: 18px;
 $_table-caption-line-height: 20px;
 $_table-caption-color: #666666;
@@ -27,6 +29,13 @@ $_seat-choose-bg-color: #43D000;
 	&:last-of-type {
 		margin-bottom: 0;
 	}
+
+	@media (max-width: library.$tablet-l) {
+		grid-template-columns: repeat(9, 10%);
+		grid-template-areas: 
+			'caption caption caption caption caption caption caption caption caption'
+			'row row row row row row row row row';
+	}
 }
 
 .seats__seat {
@@ -38,6 +47,13 @@ $_seat-choose-bg-color: #43D000;
 		font-size: $_table-caption-size;
 		line-height: $_table-caption-line-height;
 		color: $_table-caption-color;
+
+		@media (max-width: library.$tablet-l) {
+			grid-area: caption;
+			margin-bottom: 20px;
+			font-size: 14px;
+			line-height: 18px;
+		}
 	}
 
 	button {

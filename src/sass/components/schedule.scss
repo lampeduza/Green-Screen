@@ -1,3 +1,5 @@
+@use './global/library.scss';
+
 $description-term-color: #666666;
 
 $description-value-color: #ECF2FF;
@@ -17,6 +19,10 @@ $schedule-link-color-chosen: #ffffff;
 		margin-right: 83px;
 		color: $description-term-color;
 		padding: 20px 0;
+
+		@media (max-width: library.$tablet-l) {
+			margin-right: 60px;
+		}
 	}
 }
 
@@ -32,6 +38,10 @@ $schedule-link-color-chosen: #ffffff;
 
 	&:nth-of-type(3n + 4) {
 		margin-left: 110px;
+
+		@media (max-width: library.$desktop-m) {
+			margin-left: 0;
+		}
 	}
 
 	a {
@@ -69,5 +79,9 @@ $schedule-link-color-chosen: #ffffff;
 				color: $schedule-link-color-chosen;
 			}
 		}
+	}
+
+	@media (max-width: library.$desktop-s) {
+		margin-bottom: 30px;
 	}
 }
